@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: vault,dev
+  application:
+    name: spring-cloud-config-client
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: 746ca2d9-1e26-ad62-51f7-d845f9a8bed5
+    config:
+      uri: http://localhost:7601
+server:
+  port: 8081

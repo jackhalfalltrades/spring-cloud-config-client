@@ -4,21 +4,19 @@ spring:
   profiles:
     active:
       - dev
+  cloud:
+    config:
+      server:
+        vault:
+          order: 1
+        git:
+          order: 2
+          uri: https://github.com/jackhalfalltrades/service-properties
 server:
   port: 7601
   ssl:
     enabled: false
-#    key-store: ${KEYSTORE_PATH}
-#    key-store-password: ${KEYSTORE_PASSWD}
-
 logging:
   level:
     com.jackhalfalltrades.configServer.springConfigServer: debug
     org.springframework: debug
-
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: file:///Users/chandrakanthperavelli/Documents/workspace-java/service-properties/
